@@ -64,6 +64,20 @@ src/
 │   │   │   │   │   ├── test/
 │   │   │   │   │   │   ├── DocumentFactoryTest.java
 ```
+## Exemplo de Uso
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        DocumentFactory pdfFactory = new PDFDocumentFactory();
+        Document pdfInvoice = pdfFactory.createInvoice();
+        pdfInvoice.generate();
+
+        DocumentFactory htmlFactory = new HTMLDocumentFactory();
+        Document htmlReport = htmlFactory.createReport();
+        htmlReport.generate();
+    }
+}
 
 ## Testes Unitários
 
